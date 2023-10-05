@@ -1,0 +1,343 @@
+About Cloud
+
+Having access to resources using a network on demand. it is called as "cloud"
+
+The resources can be - file, email, audio, video, software, hardware requests & processing etc.
+
+Access these resources from a remote location.
+
+	Ex - Gmail, Yahoo, Outlook, etc
+
+
+					 Cloud - Types
+
+Based on network types, there are four types of cloud -
+
+Private Cloud
+Public Cloud
+Hybrid Cloud
+Social / Community  Cloud
+					Private Cloud
+
+		* client/server - 1973 IBM, released to market in 1978
+
+	   	* Accessing resources using a private network on demand is called as private cloud
+
+		* Example : Project - Travel - to office - and work.
+* Novel Networks - 1990
+
+		* Dell(EMC) and IBM are leaders currently..
+
+		1990 - VPN - "Virtual Private Network"
+
+	To Access a private network of an organization using a public network is VPN.
+	
+						 Public cloud 
+
+		* Accessing resources using Public network on demand --> public cloud
+
+		* post internet evolution : 1994, (India 1996)
+
+		internet - UN - 1987 - connecting all networks of world, 1992 - 1993  
+
+		ICANN -: 1994  USA, Russia, European ( 1994, 1995 ) ( India - 1996 )
+
+		* Accessing resources over public network (internet) on demand based 		  	it is called as "public cloud"
+
+		* existence from 1996 ....
+
+* Here, using these services we need to pay --? " PAY PER USE MODEL "
+
+1. Charge based on usage
+2. pay it after using resources (POST payment)
+3. No deposit or investment
+
+*Amazon --> 1996 --> retail --> 2002-2003--> IT business - Cloud ( 2004 ) "amazon"
+*2006 - AWS - amazon web services
+2009-10 - largest public cloud vendor - 85 %
+
+2010 - microsoft - Azure
+2012 - IBM - Bluemix
+2013 - Oracle - Oracle Cloud
+2014 - Google - GCP
+2015-16 - Dell + Apache Foundation + etc → PCF  ( Pivotal Cloud Foundry )
+
+2020 - 68 % - aws ;; 12 % azure
+Hybrid cloud
+
+	*combination of private cloud and public cloud in a organization
+		
+	* example: Banks, University, Netflix, Microsoft, AWS, Jio, 
+		       : 95 % going now... 
+
+* Exception : Defense
+
+ Community Cloud
+
+	* It is also called  the Social Cloud.
+
+	* is similar to public cloud, but they operate on a non-pay service model.
+
+	* cloud, but a use cases of open source
+
+	Example: Facebook, twitter, Telegram, Instagram, Whatsapp, Quoura,
+
+
+*** Question : Diff between community cloud and public cloud ??
+
+	*** Question :  Diff between public cloud and private cloud ?
+	
+ 					Cloud - Advantages		
+
+1. cost reduction in  IT operations
+
+2. Accessibility from anywhere
+
+	australia - india - cloud - online - resources -
+3. Availability of Resources on demands - 24 * 7 * 365
+
+4. ** Up front Investment not required 
+
+Use case :   	Start up companies - boom
+ 			lease - resources - use it  - pay per use - after the use....
+
+Use case :		Netflix - World movie website - own servers - cloud 100%
+
+5. Maintenance headache are gone 
+
+	traditional - buy servers - setup - maintain
+		
+	cloud - vendor - demand of resources - enjoy services - ** cost reduction
+
+6. 	Cloud vendors - they will take care of end to end activities like - 
+
+ Updates
+ Disaster mgmt
+ Support
+ License cost 
+Data Mgmt etc
+
+7. Cloud vendors offer a lot of services
+
+8. It is a boom for the companies to focus on their core competency.
+
+Ex- pharma companies
+
+
+Cloud - Concerns
+
+1. the internet is  a dependency, some parts of the world still do not have internet access.
+
+	Example: South African countries, cloud still a question
+
+2. broadband internet - slowness - 
+
+3. Vendor - 24 * 7 -- > service issues - * down time - concern for ur business
+
+	Unplanned - concern
+
+4. *** vendor lock in issue ***
+
+--> 2020 - azure - setup -- using -- not satisfied --> 2021 - aws --> down times ** 3 days **
+
+	- sneap deal - azure --> 2021 - aws -- down time - 3 days
+
+	7 --5 -3 --> 1 to 3 days...;; Live migration (chargeable)
+
+5. Cloud - 100 % not flexible or not custom
+tradition --> custom - will --> 100 %
+	
+	cloud --> 100 % --> 95 % is possible
+
+6. Security of services on cloud, ---> 
+	
+	* Every thing happens on trust factor bt u and vendor
+
+        * fb -> cabdrige university 
+	
+	* Microsoft --> 15000 indian clients data was leaked ( Dec 2020 / Jan 2021 )
+
+7. Services - variances - prices - Features
+
+8. **IT companies are losing experience of traditional IT, because of Cloud vendor
+
+	netflix - 100 % cloud - cloud close their shop..
+
+Example : Script med -- 2 versions - 1st SME (traditional) ;; 2nd - SMC - AWS, AZURE, PCF, ** GCP -
+
+data - tradtional - -> cloud (balance)
+
+***** Public cloud services: ( pay per use model )  ***** 
+
+1. IAAS - infrastructure as a service
+* client --> vendor ( AWS ) --> hardwares ;; 
+* client will have to setup rest of things ( OS Setup , Application Setup, etc )
+
+	--> AWS is a leader
+	--> 2005, Microsoft was largest holder of Data centers, 2018 AWS Largest data centers holder, 6X (Report - GARNER)
+	
+
+2. PAAS - Platform as a service
+
+* client --> will get from cloud vendor ( hardware + os )
+
+* client will have to setup the application
+
+	---> both AWS/azure are same page.
+
+
+3. SAAS - Software as a service
+
+client --> app (billing/hotels) --> cloud vendor (AWS)--> 'modelled applications'
+
+	--> customize for u --> application --> use it. -->  Pay it
+
+If SAAS was not there, alt.solution: { IT company, Hire developer, self }
+
+	-- client zero maintainence -- pay for it.
+
+--> *SALES FORCE is a leader, AWS, Oracle
+
+	---> 1996, force.com --> infosys, IBM, --> technology SAAS
+
+4. XAAS - "Everything as a service"
+
+     --> service, whatever client asks - cloud provide - hardware, application, network, support, etc
+
+	--> IBM is a leader
+
+Other services -
+
+** NAAS - Network  as a service
+** DBAAS - Database as a service
+** DAAS - Database as a service
+** CAAS - Container as a Service
+** FAAS - Fileserver as a service
+** VAAS - VCS as a service    
+
+Introduction to AWS 
+
+
+2004, cloud business with brand Amazon
+SQS - Simple Queue Service - 1st Service by AWS
+2006 Dec, they started a another business unit, "AWS" - amazon web services 
+Journey 2004 - by 2010- leaders in cloud
+cloud 62 % hold of market holding according GARNER reports, 2020 year
+Volume Of business - higher side
+
+Why AWS Popular 
+
+ Best Support
+ Less downtimes,  ( Compare -- aws and azure )
+ Price - aws is cheapest one
+Operates on pay per use model  
+AWS currently offering 1 year free subscription with some free services but with limitation. 
+Popular Services -- SQS, Ec2, S3, RDS etc
+
+** startup companies -- free offers - Example: Ec2, DB, etc
+
+survey -- company 100 rupees ;; aws - best benefit - 40 %  
+
+Case study: 
+
+Use - dell - Pivotial Cloud Foundry - free hardwares / EC2 - Dell 6  servers - as built servers 
+
+*** AWS Creation Progress ***
+
+Referlink: 
+
+https://support.sou.edu/kb/articles/amazon-web-services-account-creation
+
+- aws - free 1 year free services but limitations
+- email id, phone, credit/debit - 2 charge u/ return 2 in 15 wd
+- Ruy card - will not work**
+- once you complete the registration part, you will get the email from AWS.
+- Activate email that you get. After few minutes, another aws email -- "success/failed" - 
+login link --> web page --> "aws web console login"
+
+	https://aws.amazon.com/console/
+
+ur account -- my account -- if I create some other users -- IAM USER
+
+Computer - system admin ;; -->users
+
+
+After login:
+1st - you switch to right region
+2nd - select the required services that we are about to create
+3rd - 
+
+AWS - EC2 Chapter.
+
+Services - free, limited, billing.
+
+refer to documents of AWS - service. 
+
+Introduction to EC2
+
+EC2 - Elastic Cloud compute
+if we create a computer online and access it from anywhere -- "online virtual server"
+Ec2 - is all about creating an online virtual server, which can be accessed over the internet.
+Ec2 - comes under free tier services but with some limitation
+
+1. Choose AMI (Amazon Machine Image)  - select the OS
+2. Choose Instance Type - Hardware ( CPU, RAM, STORAGE DISK, MOTHERBOARD TYPES)
+3. Configure Instance -  .. simply .. next
+4. Add Storage - Space needed for HDD disk
+5. Add Tags - Names ur computers
+6. Configure Security Group - setup of ports
+7. Review - 
+
+keypair(password)-file-download--> called as PEM File
+Privacy Enhanced mail.
+
+Ec2 - create -will two IP address: IPV4
+
+	1. Private IP
+	2. Public IP
+
+-> to connect Ec2, we are supposed to use Public IP v4
+--> Talk from one Ec2 to another Ec2 - use Private IP v4
+
+What details u have about Ec2?
+
+	- IP public v4
+	- password ( pem file )
+	- login ID 
+	- App to connect - gitbash, putty
+
+
+# ssh login_id@ipv4address -i <pemfile>
+
+* When we are using putty, we need ppk file and not pem file.
+* AWS --> download --> pem file --> puttygen converts pem into ppk
+
+Site: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+* using ppk in putty, we need connect to AWS Ec2
+
+** Process to convert pem into ppk file **
+
+1. open puttygen
+2. click on Load and browse to pem file
+3. click on Save Private key
+
+Note : Restart the computer..
+
+              Connect EC2- Linux Instance using Putty
+
+1. make sure we have ppk file ready
+
+2. Open putty, put the userid@public_Ipv4_AWS_Ec2_instance
+
+3. Then, expand "connection" then expand "SSH"
+
+4. Now, select "AUTH", browse to ppk file.
+
+
+Windows Instance creation on EC2
+
+Refer to below URL for steps :
+
+https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EC2_GetStarted.html
+
