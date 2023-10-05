@@ -1,0 +1,620 @@
+Git - Features
+
+ Git is an open source
+ Git implements DVCS techniques
+That means it contains  - Remote Repo, Local Repo
+Git -- Encryption of SHA (Secure Hash Algorithm)
+Git - windows /Linux/ Mac
+OS - 32 and 64 bit
+Released in 2003 year, by  Linus Torvalds
+Language  written in c →  Pearl →  Python
+Official site : https://git-scm.com/
+No system requirements to install git.
+				
+Git - Installation on Windows
+
+go to the official site and download, proceed with installation.
+
+	Official Site : https://git-scm.com/
+
+screenshots of installation available at -
+
+=================================================================
+
+https://freshersnotes.com/how-to/how-to-install-git-on-windows/
+
+http://robertovormittag.net/ebooks/git-and-github/git-for-windows-installation-screenshots/
+
+Note:  While installation, under screen shot of "adjust path environment", select "use git from git bash only"
+Git - Installation on Linux
+
+
+Q. Command to install -
+
+    # yum install git
+
+
+				Git - Verify Installation
+
+Q. Command to verify the installation -
+
+    # git  --version
+Expected Output: 
+
+[root@localhost ~]# git --version
+git version 1.8.3.1 
+
+ 				
+Git - Configurations
+
+Q. How to check the configuration of git ?
+
+    # git config --list
+
+There are 7/8 configurations which can be configured.
+
+===================================================================
+
+out of these, 2 configuration are mandatory 
+They are : user.email and user.name
+
+			Git - Configure User Name
+
+Q. How to configure a user name ?
+
+    # git config --global user.name <name>
+
+    Example:
+
+    # git config --global user.name thumuvikram
+
+			Git - Configure  User Email
+
+Q. How to configure user email id ?
+
+    # git config --global user.email <email_id>
+
+Example: 
+
+    # git config --global user.email thumuvikram@gmail.com
+
+
+Git - Configuration Use Cases
+
+Q. What if the information of user.name or user.email are incorrect ?
+
+    fix : rerun the command with correct information
+
+Q. How to change/update user.name or email ?
+
+    # git config --global user.name <Name>
+
+Q. Do you think the email id that was given in configuration is getting validated ?
+
+no validations
+
+Git - Project / Local Repository Creation
+
+Q. How to create the project or Local Repo in git ?
+
+   # git init <project_name>
+
+
+  # git init <local_repo_name>
+=================================================================================
+
+Git - Project / Local Repository Creation Use cases
+
+Q. How do you verify if that folder is a git repo or not ?
+
+    method 1
+  cd into folder then
+
+ # ls -la  
+
+ we should see .git folder
+
+    method 2 # 
+
+cd into folder then
+
+ # git status 
+
+we will get some response
+
+Q. How many projects/repositories can we create on the client side ?
+
+    unlimited.
+
+Q. Will you create a project/repo inside of another repo on the client side?
+
+    no.
+
+Q. What are two commands which can be executed irrespective of repo or project ?
+
+    # git --version
+
+    # git config --list
+
+*** we will find .git folder which is hidden exists in a local repo/git project
+
+Q. linux ls -l and ls -la
+
+Ls -l   will show all files and folders
+Ls -la  will show all files and folders including hidden one’s as well
+
+Q. Do we have to create repo in the root folder only or can we create repo at any location?
+
+    Location does not matter
+==================================================================================
+
+ GIT - Commit Changes
+
+Q. How to do a single commit ?
+# git add <filename>
+
+    # git commit -m "message" <filename>
+
+Q. How to commit more than one file ?
+
+    # git add file1 file2 file3 ....
+
+    # git commit -m "message" file1 file2 file3 ...
+
+Q. shortcut to commit, if we have a lot of files to commit.
+
+    # git add .  
+
+it will pick up all the files which are untracked, copy to stage
+
+    # git commit . 
+
+it will pick up all the files which are staged or indexed,move to CA
+
+	ABOUT WDC / WTC
+
+***Q. Why Working directory clean ( linux ) messages ?
+
+   WTC  -- Working tree is clean ( windows)
+
+* we get the message under two conditions.
+
+  1st - 	WD/WC == CA
+
+***file content Level***
+
+  2nd - 	if number of files in stage = 0
+
+ both 1st and 2nd conditions have to be true.
+
+Q. Does git only work with text files or  how about other file formats ?
+
+    Git tracks any type of file format
+				
+GIT LOCAL CONFIGURATIONS
+======================================================================================
+Q. How to create local configuration for git projects ?
+
+    step 1: go into git project # cd <project_name>
+
+    step 2 :  user name
+
+   	 # git config --local user.name <name>
+
+   	 # git config --local user.name john
+
+    step 3:  user email
+
+   	 # git config --local user.email <email>
+
+   	 # git config --local user.email john@gmail.com
+
+    Step 4: verify
+
+   	 # git config --list
+
+   		 .... ( global configurations )
+   		 ....
+   		 .... ( Local configuratio
+=======================================================================================
+SEE CHANGES IN GIT
+
+Q. Command to see committed files or in CA ?
+
+    # git ls-files
+
+Q. Command to see files in staging ?
+
+* we don't have any specific command
+* # git status can help in this regard
+* based on the messages helps us to understand about the files in staging.
+
+
+Q. How to see the last commit or recent commit of a repo?
+
+    # git show
+
+ we get details like - 
+commit id, 
+authour, 
+Date-time-timezone,
+commit message
+   # git show <CID>
+
+Q. How to see all the commits done so far on the repo ?
+
+    # git log --all
+
+    start to end(latest)
+
+Q. How to see recent commits done in the repo ?
+
+    # git log 	( it shows recent 10 commits of repo )
+
+Q. How to see all the commits info in a short format ?
+
+    # git log --oneline
+
+Q. How to find commits done by a particular user in a Project ?
+
+# git log --author=<name or email>
+
+Q. How to see specific details of a commit ?
+
+    1st # git show <commit id>
+ 2st # git log -p
+================================================================================
+GIT UNSTAGE
+
+Q. How to unstage a file ?
+
+    # git reset HEAD <filename>
+
+     It will rollback file into WC/WD from stage/index
+
+					GIT REVERT
+
+Q. git revert command ?
+
+# git revert <CID>
+
+It helps to undo a commit
+
+*** git revert should be applied after u done the commit on a file.
+** applicable on the committed files.
+GIT CHECKOUT -- Filename
+
+Q. How to undo changes before commit?
+
+    # git checkout -- filename
+
+
+GIT RM
+
+Q. How to delete a file/folder from Repo?
+
+    # git rm <filename>
+    
+Note:
+ Any file that we delete, then file will be autostaged,
+ 
+     # git status
+
+=========================================================================================
+Cloud Hosting of Remote Repo
+
+Use case 1 -
+
+if your org, has own server - then we do not need github, bit bucket, etc
+
+Use Case 2 - 
+
+if your org wants to host the repo on a third party server then need cloud vendors who support remote repo on lease.
+ex - github, bit bucket, assembla, gitlab etc
+
+- challenges of hosting, Remote Repo on Own Server
+
+1. security
+2. availability
+3. down time
+4. network issues
+5. maintenance
+6. cost
+7. OS license
+8. resources to manage it
+9. Backup
+Repo Types with Cloud Vendors
+
+Remote Repos are of two types:
+
+    1. public Repo
+   	 - free
+   	 - limit in space
+   	 - repo count
+   	 - accessed by any person who has a github account.
+          - Suitable for open source.
+
+    2. Private repo
+   	 - pay for using private repo
+   	 - all features apply
+   	 - Private repo can be accessed only by authorized persons
+    
+Realtime: when you join any project, they share your github id and password.
+
+Note : 
+
+* all non-critical or medium critical repos are generally hosted on cloud
+
+* All critical data of repo's are hosted on their own server.
+
+ 
+
+Github - Introduction
+
+1. github created on 2007
+2. Purchased by Microsoft in 2018
+3. Operates on Principle of "Pay per use model" ( Service - Cost ) 
+    * no investment --> use services -- pay for it.      
+4. Support 2 types of repo - public and private
+5. Features wise ranked 1 in the market
+6. Headquarters : San Francisco.
+Github - Features
+
+1. free account
+2. Public Repo unlimited
+3. Private Repo with Limitations
+4. pay per use
+5. largest
+6. network speed
+7. universal
+				
+Github - Account Creation
+
+Q. How to create the repo in github?
+
+-- login into github
+-- then create new
+-- give a name to it
+-- readme file - you can update about information over their
+
+
+Q. How to clone a remote repo onto your computer ?
+
+ # git clone <repo_URL>
+
+Note -
+When we clone public repo, it will not ask any git hub ID and github password (Token)
+When we clone private repo, it will ask your github  ID and github password (Token)
+
+Q. How to identify the repo which is clone or remote origin ??
+
+   	 # git remote -v
+
+   	 or
+   	 
+ # git config --list
+
+we will get the details of remote links
+
+Q. How to pull the updates from remote repo ?
+
+   	 # git pull
+
+Q. How to update the changes from local to remote repo ?
+
+   	 # git push
+
+Note : REPO -- create -- for push -- create access key 
+
+PROFILE → settings >> Developer settings → Generate new Token →
+
+Need Token to perform action of git push. Refer to below link to about github token creation process.
+
+https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token
+
+Q. How to commit the changes to the server side ?
+
+    1. commit changes on local repo
+
+    2. git pull      →  	to pick up updates from server to LR
+    
+    3. git push   → 	to pick up updates from LR to Server
+
+============  07 June 2023 =================
+
+Git - Branching
+
+Branch uses :
+   
+    1. code experimentation
+    2. apply changes on existing code
+    3. testing the code
+    4. debugging the code
+
+Q. How to know the branch info ?
+
+# git branch
+or
+
+# git status
+
+Q. how to know the current branch info ?
+
+# git branch
+
+* indicates the current branch
+
+2nd : # git status
+
+    on branch <....>
+
+Q. How to create a branch?
+
+# git branch <br_name>
+
+Q. How to move into another branch ?
+
+# git checkout <br_name>
+
+Q. How to merge the changes into parent ?
+
+# git merge <br_name>
+
+    ** Usually, we merge the child branch into the parent.
+
+    case 1. Can you merge a child into another parent ?
+
+   		 yes, but there is high probability conflicts
+
+Q. How to delete the branch ?
+
+    ** we can only delete the child branches.
+
+    # git branch -d <br_name>
+
+Q. How to rename a branch ?
+
+    # git branch -m oldname newname
+
+Q. Can we rename a main or master branch ?
+
+    # yes
+Note : normally in IT projects they void renaming the main or master branch.
+
+    # git branch
+
+error : git push
+fatal: incorrect_client_credentials: The client_id and/or client_secret passed are incorrect. [https://docs.github.com/apps/managing-oauth-apps/troubleshooting-oauth-app-access-token-request-errors/#incorrect-client-credentials]
+remote: No anonymous write access.
+fatal: Authentication failed for 'https://github.com/vijaygit12/firstrepo.git/'
+
+Logon failed, use ctrl+c to cancel basic credential prompt.
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/libexec/git-core/git-gui--askpass'
+Username for 'https://github.com':
+
+C:\Program Files\Git\git-bash.exe --cd-to-home
+
+Q. Do you think merge and push are the same ?
+
+push - local - to server
+
+merge - branch to LR
+
+Q. Do we create a branch within other branch?
+  Yes, but make sure we merge the changes in its parent
+
+Q. Is there any real time use case, where we push the code to the repo from the branch instead of main?
+
+We can do, but this will not a process in R.T
+
+
+Q. developers only create the local branches right, so what is the role of a devops engineer there ?
+
+          CONCEPT - GIT IGNORE
+
+*** git ignore  ****
+
+repo -- file -- if we do not want to apply any VCS, then we should update the file name in gitignore
+
+gitignore is a file
+
+1. excluded from VCS
+2. those files will not be uploaded to the server, not part of pull and push...
+3. any changes that we make to gitignore, we have to commit the changes...
+
+-- 99 % times, when project is created, .gitignore
+
+-- use cases:
+
+1. development files are still pending or yet to complete
+
+2. users will try to maintain there notes of the project
+
+3. Userid and password files
+
+4. junk/temp files of the project
+
+5. not required files
+
+Note: ** git will not apply any VCS on a folder which is empty.
+Q. What happens when you put a file in git ignore that is already being tracked?
+
+
+Q. what if .gitignore itself is included in the .gitignore file
+
+
+Topic - Git Diff
+
+1. git diff
+
+- it will compare the data of committed file with a modified file
+
+or
+
+- it will compare the data that is in CA to that of WD/WC
+
+Position : The file should not be staged
+
+Green : it has been just added but not yet committed
+
+white : it has been committed ; sits on wc/wd and CA
+Red : the content was already committed and we are trying to remove it in WD/WC
+
+2. git diff --staged
+
+use this command only when we stage the modified file.
+
+it will compare file/content in stage to that CA
+
+Case study::
+-----------
+
+git will not track any folder which is empty
+
+git will work on content basis
+
+
+Q. How to set the color high lighting in Git ?
+
+# git config --global color.ui true
+
+# git config --global color.status auto
+# git config --global color.branch auto
+
+Red color - File - untracked or modified or line in a file has been deleted
+
+Green Color - File is staged or a Line in a file has been added
+
+
+Home work --
+
+git rebase -
+git switch -
+git stash -
+git reflog -
+
+Project --
+
+1. create a Remote Repo let us say "xyz" - add readme and .gitignore file
+
+2. in xyz, create two files and commit them in xyz
+
+3. now, clone it on your machine
+
+4. on our machine -- xyz, then create another 4 files with some sample data in local side
+
+5. do git pull and push activity
+
+Project 2 --
+
+1. Create a Remote Repo let us say "abc" - add readme and .gitignore file
+
+2. in abc, create three files with some sample data in it and commit them.
+
+3. Now, create a Local Repo "def", here add some files with some data
+
+4. Now, link "def" with "abc"
+
+5. complete pull and push activity
+
+
