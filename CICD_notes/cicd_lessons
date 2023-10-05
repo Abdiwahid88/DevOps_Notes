@@ -1,0 +1,620 @@
+CI 
+# Continous Integration
+# Strategy Of DevOps
+# CI is all about integrating live changes of source code into Master/production/release after being validated and tested
+
+Porperties
+1:changes push shoud be small unlike in agile they are huge 
+2: changes that we move should be capable enough to test functionality 
+
+Example Arthimetic calculations 
++-*/
+
++==> -==> *==. /==>
+
+3: frequency of changes deployed shoud be more regular 
+4:entaire of process build test pachage release automated 
+5: CI if fails rollback 
+
+
+CD 
+
+Coninous Development
+continouse delivery 
+continous deployment 
+
+Continous Delivery 
+is all about to make your deliverable in ready mode waiting for approval for deploymnet in production / release cycle. 
+Deployment should happen in automated mode
+Changes should be small / minor 
+Int. Question - Diff between CI and CD. 
+
+  CI/CD Tools
+
+ Below are few notable CI/CD tools in the market
+
+Jenkins  
+    Bamboo  
+    Teamcity 
+    Azure devops  
+    octopus
+    travis CI
+    gitlab
+    u deploy u ship
+    Harness
+    AutoRabit
+    … etc
+
+About Jenkins
+
+leader - market - 7 yrs
+CI/CD tool
+60 % of the market of CI/CD 
+written java
+jenkins operates on plugin concept
+Example: android -- apps
+Jenkins UI is best
+Jenkins 99 % fits in for IT use cases
+Easy to use
+Easy to set up
+** Works on 32  and 64 bit os
+Works on windows / linux / mac
+Open source
+
+. Q. Tell me about features of Jenkins?
+  Q. What is CI and CD ?
+
+          History Of Jenkins
+
+engineer student  2003-04 - Japan - name: kawaguchi
+College Project with 4 members
+After done with college, continued with project and created a new tool in build process that could compete existing licensed build tools
+Sun Microsystems offered jobs in 2006.
+Tool - named as hudson 2008 - sun microsystems released in 2008.
+Open source → hudson  under sun microsystems - 2008 - 2009
+2009 - Sun Microsystems was purchased by Oracle
+Easy to use
+Easy to set up
+** Works on 32  and 64 bit os
+Works on windows / linux / mac
+Open source
+
+. Q. Tell me about features of Jenkins?
+  Q. What is CI and CD ?
+
+          History Of Jenkins
+
+engineer student  2003-04 - Japan - name: kawaguchi
+College Project with 4 members
+After done with college, continued with project and created a new tool in build process that could compete existing licensed build tools
+Sun Microsystems offered jobs in 2006.
+Tool - named as hudson 2008 - sun microsystems released in 2008.
+Open source → hudson  under sun microsystems - 2008 - 2009
+2009 - Sun Microsystems was purchased by Oracle
+In 2010 - oracle ---> hudson into enterprise ( license)
+Kawaguchi team quit jobs in oracle
+2011 - 2013 - jenkins  
+2013 - release a new tool - Jenkins as open source
+*1st tool - CI/CD - plugins concept **
+
+
+
+ 
+Jenkins System Requirements
+
+1 GB RAM free available
+50 GB HDD
+Java JDK 1.8 or JRE 1.8 installed or above
+Recommended to install JDK version of Java
+
+
+
+Step 1 - download Java from below site 
+
+https://www.oracle.com/in/java/technologies/javase/jdk11-archive-downloads.html
+
+Step 2 - Install it after download.
+
+Next .. next…finish
+
+Step 3 -- Configure Java
+
+Jenkins System Requirements
+
+1 GB RAM free available
+50 GB HDD
+Java JDK 1.8 or JRE 1.8 installed or above
+Recommended to install JDK version of Java
+
+
+
+Step 1 - download Java from below site 
+
+https://www.oracle.com/in/java/technologies/javase/jdk11-archive-downloads.html
+Step 2 - Install it after download.
+
+Next .. next…finish
+
+Step 3 -- Configure Java
+
+Step -- Open site of git and install git
+
+Step = Open site of jenkins and download jar file of LTS type
+
+
+Step == Command to start the jenkins
+
+# java -jar jenkins.war
+
+
+** Default port number of Jenkins → 8080
+
+** can we start the jenkins on non default port → Yes
+
+** access the jenkins
+Open browser
+IPaddress_server:portnumber
+** Jenkins operates on web server called “Jetty”
+
+Example : localhost:8080
+
+** Put the password into below screen
+ Download,Install, Configure of Java JDK - Linux OS
+
+Step 1 -	
+
+Download Java from Oracle site
+
+    https://www.oracle.com/in/java/technologies/javase/javase-jdk8-downloads.html
+
+Step 2 -		
+
+Download " Linux x64 Compressed Archive " using  oracle ID and password
+
+Step 3 -
+
+ File gets downloaded onto the Windows computer.
+ Need to transfer the file to Linux PC using either Winscp or scp command or Mobaxterm
+
+     Note: 
+
+   scp Command Method :
+
+    # scp source_file userid@target_ip:targetpath
+
+make sure to fire this command from ur source computer ( from where java downloaded computer)
+
+Step 4 : 
+
+After the transfer JDK file to linux os under /opt/java folder
+
+    # cd /opt/java
+
+# ls -l
+
+    <file_downloaded>
+
+    # tar -xvf <file_downloaded>
+
+    # ls -l
+
+Note : 	make a note of java version that got installed / Untarred
+
+Example:  <java_installed_version>
+
+
+
+Step 5: Configuration
+
+Below is the Java configuration Template
+
+For java
+
+# update-alternatives --install /usr/bin/java java /opt/java/<java_installed_version>/bin/java 100
+# update-alternatives --config java
+
+For JAVAC
+
+# update-alternatives --install /usr/bin/javac javac /opt/java/<java_installed_version>/bin/javac 100  
+# update-alternatives --config javac
+
+For JAR
+
+# update-alternatives --install /usr/bin/jar jar /opt/java/<java_installed_version>/bin/jar 100  
+# update-alternatives --config jar
+
+
+Step 6 - Exporting  Java Environment Variables
+
+
+# export JAVA_HOME=/opt/java/<java_installed_version>/
+# export JRE_HOME=/opt/java/<java_installed_version>/jre
+# export PATH=$PATH:/opt/java/<java_installed_version>/bin:/opt/java/<java_installed_version>/jre/bin
+
+Step 7 - Verify
+
+# java -version
+
+expected o/p:
+
+java version "1.8.0_301"
+Java(TM) SE Runtime Environment (build 1.8.0_291-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.291-b09, mixed mode)
+
+Java Configuration in Linux Instance - AWS Cloud
+
+Install Java JDK version
+Find all java versions at cd /usr/lib/jvm
+Write below values -  into file /etc/profile at the end of file
+
+export JAVA_HOME=/usr/lib/jvm/<java_version_installed>
+export PATH=$PATH:$JAVA_HOME/bin
+
+
+# source /etc/profile or logout and login back
+Verify # java -version
+
+
+Installation of Jenkins - Linux OS
+
+Step 1 - Create jenkins folder under /opt
+
+    		# cd /opt
+Installation of Jenkins - Linux OS
+
+Step 1 - Create jenkins folder under /opt
+
+    		# cd /opt
+   # mkdir jenkins
+
+    		# cd jenkins
+
+Step 2 - Get the LTS, war file URL from Official Jenkins site
+
+    		# wget URL_Jenkins_War_file
+
+Step 3 - Start Jenkins
+
+    		# java -jar jenkins.war    	 
+   	 		....
+   			 ....
+      		Jenkins is fully up and running
+
+  Step 4 - open the any browser on windows pc, put below
+
+     		ipaddress_jenkins_server:port number
+
+    		example : 192.168.0.8:8080
+
+
+Note - 
+
+* jenkins starts on default port 8080
+* if we get "connection timed out" then stop firewall
+ # service firewalld stop
+
+Step 5 - Unlock jenkins
+
+    * the password to unlock jenkins will be available at    		 
+   	 /root/.jenkins/secrets/initialAdminPassword
+
+    # cat <password file>
+
+    example : #  cat /root/.jenkins/secrets/initialAdminPassword
+
+    Step 6 -  Select Plugin
+
+ "select suggested plugins to install"
+
+Jenkins Menu
+
+
+New item   		
+project/Pipeline/job
+People
+User Account Information
+Build History
+Shows Previously Executed builds
+Manage Jenkins
+Contains Settings of Jenkins
+My View
+ Helps to list specific projects
+New View
+ Creates a new Dashboard
+
+
+
+New item   		
+project/Pipeline/job
+People
+User Account Information
+Build History
+Shows Previously Executed builds
+Manage Jenkins
+Contains Settings of Jenkins
+My View
+ Helps to list specific projects
+New View
+ Creates a new Dashboard
+
+
+
+** Build Queue			 :  pipelines which are waiting to get executed
+
+** Build Executor status : 	 shows what's going on the cpu or being in progress
+
+ Manage Jenkins
+
+
+System Configuration:
+
+
+- Configure system
+- Global Tool Configuration
+- manage plugins
+- Manage nodes and clouds
+Security
+- Configure Global Security
+- Manage Credentials
+- Configure Credential Providers
+- Manager Users
+status Information:
+
+
+-system Information
+-System log
+- Load Statistics
+- About Jenkins
+Troubleshooting
+- Manage old Data
+Tools and Actions
+
+
+ - Reload configuration from Disk
+- Jenkins CLI
+- Script Console
+- Prepare for Shutdown
+
+
+
+
+
+					Manage Plugins
+
+Manage jenkins ---> system configuration → Manage Plugins ( Plugins Manager )
+
+
+New item   		
+project/Pipeline/job
+People
+User Account Information
+Build History
+Shows Previously Executed builds
+Manage Jenkins
+Contains Settings of Jenkins
+My View
+ Helps to list specific projects
+New View
+ Creates a new Dashboard
+
+
+
+** Build Queue			 :  pipelines which are waiting to get executed
+
+** Build Executor status : 	 shows what's going on the cpu or being in progress
+
+ Manage Jenkins
+
+
+System Configuration:
+
+
+- Configure system
+- Global Tool Configuration
+- manage plugins
+- Manage nodes and clouds
+Security
+- Configure Global Security
+- Manage Credentials
+- Configure Credential Providers
+- Manager Users
+status Information:
+
+
+-system Information
+-System log
+- Load Statistics
+- About Jenkins
+Troubleshooting
+- Manage old Data
+Tools and Actions
+
+
+ - Reload configuration from Disk
+- Jenkins CLI
+- Script Console
+- Prepare for Shutdown
+
+
+
+
+
+					Manage Plugins
+
+Manage jenkins ---> system configuration → Manage Plugins ( Plugins Manager )
+
+
+
+
+
+
+Installed Tab
+Shows all plugins that are installed
+Enable or disable
+We can remove the plugin
+
+
+Available tab
+Select the plugin and proceed with install
+Green - success
+Red- failed
+Orange -- “ Downloaded now, install after restart”
+
+Note - Restart is applicable to jenkins only
+
+Note - Always refer to documentation of plugin before install
+
+1.  know the use of plugin
+2.  may contains steps about configuration in jenkins
+Updates Tab
+Select plugin that is required to be updated
+Note - updates will not be effective unless reboot jenkins		
+	
+Advanced Tab
+Proxy settings
+Deploy plugin - download or URL , make sure plugin has .hpi extension
+.hpi refers to hudson package installer
+Updates link - jenkins receives updates.
+
+
+
+
+***GUIDELINES OF SELECTING PLUGIN's for your TASK in PROJECT ****
+
+1. Complete information about what you do for a task. (objective)
+
+2. Think about it, search on google for the keywords of your task.
+
+3. (hint), make a list of all the plugins(4/5) that are required for your task.
+
+4. ur duty, to check with document of those plugins and also reviews those plugin
+
+   	 document 4/5 -  2/3
+
+   	 reviews on those 2/3 plugin's : - best one*
+
+   	 *** check with your senior devops eng and take the decisions
+
+
+OR
+directly we will directions from archtectural team about plugins to install
+
+
+Q. How do you open the documentation of a plugin ?
+
+    click on plugin >> wiki page of jenkins plugins >>
+
+
+Q. will documentation helps you ?
+    
+    50 % - 70%  ( read the document couple of times )
+
+    ** assistance : google, and youtube
+
+Q. ** plugins installations are two types -
+
+    1. Simply install the plugin
+    
+    2. install, and also configure it after install
+
+    How come we know what method to be followed ?
+
+    reference documentation only.
+
+Q. Do we have like any test env setup of jenkins to try all these things in real time?
+
+    Yes. ( 99 % ) - try and see ..
+
+Q. What is the ideal time to install the plugin's and configure it on live build server ?
+
+    ** install/confgure the plugins when builds are not running.
+
+    else
+
+    *** there is high probability that running builds will fail
+
+note: can be ignored if the task is of critical
+
+====== TOPIC : JOB CREATION PROCESS IN JENKINS ==========================
+
+Q. what happens when we start the jenkins without port number ?
+
+    it starts on a default port number 8080
+
+Q. use case --> plugin -->
+
+    no plugin -- available on internet
+1. download plugin and upload in jenkins 1%
+
+    2. plugin for project --
+
+   	plugin jenkins - .hpi ( hudson packer installer)
+
+Q. What tabs are available when a project/job is created ?
+
+    1. General
+    2. Source Code Management
+    3. Build Triggers
+    4. Build Environment
+    5. Build
+    6. Post Build Actions
+
+
+
+Note - * We configure the options under those tabs based on requirement/demand. It implies that configurations are optional in nature.
+
+Q. What happens while the storage capacity ( Disk) of the build server becomes full ?
+
+    1. Errors/notification
+    2. All builds will go into Queue
+    3. The builds are in process execution they will run forever
+
+Q. What is the meaning of trigger in jenkins?
+  Trigger is an interaction between Jenkins and code
+    
+    or
+
+    it tells about when to fire the code
+
+    or
+    
+    it tells about when the event of build process should happen
+
+Add Timestamps to Console Ouput -
+
+Helps in debug code
+Understand the timestamp of the process of code.
+
+Symbol
+No. Of Builds
+Success
+Failed
+Sun with glow
+5
+5
+0
+Sun With Cloud
+5
+4
+1
+Clouds
+5
+3
+2
+Cloud with Rain
+5
+2
+3
+Clouds with Thunders
+5
+1
+4
+
+
+
+
+Console Output
+
+
+
+
